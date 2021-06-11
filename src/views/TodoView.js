@@ -14,11 +14,20 @@ export default function TodoView() {
     setTodos([...todos, todo]);
     setId(id + 1);
   }
+
+  function toggleDone(todo) {
+    todo.isDone = !todo.isDone;
+    setTodos(todos.map((item) => (item.id === todo.id ? todo : item)));
+  }
+
+  function deleteTodo(todo) {
+    setTodos(todos.filter((item) => item.id !== todo.id));
+  }
   return (
     <div className="todoView">
       <h1>Todo</h1>
       <Input addTodo={addTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={deleteTodo} toggleDone={toggleDone} />
     </div>
   );
 }
