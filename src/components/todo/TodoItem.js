@@ -10,13 +10,17 @@ export default function Todo({ todo, toggleDone, deleteTodo }) {
   }
   return (
     <li className={todo.isDone ? styles.done : ""}>
-      <span>{todo.text}</span>
-      {todo.isDone ? (
-        <CheckSquare onClick={handleDoneClick} />
-      ) : (
-        <Square onClick={handleDoneClick} />
-      )}
-      <X onClick={handleDelete} />
+      <span className={styles.textField}>{todo.text}</span>
+      <span className={styles.button}>
+        {todo.isDone ? (
+          <CheckSquare onClick={handleDoneClick} size={20} />
+        ) : (
+          <Square onClick={handleDoneClick} size={20} />
+        )}
+      </span>
+      <span className={styles.button}>
+        <X onClick={handleDelete} color="red" size={40} />
+      </span>
     </li>
   );
 }

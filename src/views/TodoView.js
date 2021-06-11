@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "../components/todo/Input";
 import TodoList from "../components/todo/TodoList";
+import styles from "./TodoView.module.css";
 
 export default function TodoView() {
   const [id, setId] = useState(0);
@@ -24,7 +25,7 @@ export default function TodoView() {
     setTodos(todos.filter((item) => item.id !== todo.id));
   }
   return (
-    <div className="todoView">
+    <div className={styles.todoView}>
       <h1>Todo</h1>
       <Input addTodo={addTodo} />
       <TodoList todos={todos} deleteTodo={deleteTodo} toggleDone={toggleDone} />

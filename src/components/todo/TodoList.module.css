@@ -1,0 +1,28 @@
+.todoList {
+  width: 500px;
+  margin-top: 10px;
+  overflow-y: auto;
+}
+
+.todoList::-webkit-scrollbar {
+  width: 6px;
+}
+.todoList::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+.todoList::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  background-color: gray;
+}
+.todoList::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
