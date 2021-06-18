@@ -1,4 +1,3 @@
-import "./App.css";
 import TodoView from "./views/TodoView";
 
 function App() {
