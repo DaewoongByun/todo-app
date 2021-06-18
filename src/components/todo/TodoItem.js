@@ -10,7 +10,10 @@ export default function Todo({ todo, toggleDone, deleteTodo }) {
   }
   return (
     <li className={todo.isDone ? styles.done : ""}>
-      <span className={styles.textField}>{todo.text}</span>
+      <div className={styles.textField}>
+        <span className={styles.title}>{todo.text}</span>
+        <span className={styles.date}>{`${todo.year}/${todo.month}/${todo.day}까지`}</span>
+      </div>
       <span className={styles.button}>
         {todo.isDone ? (
           <CheckSquare onClick={handleDoneClick} size={20} />

@@ -36,9 +36,9 @@ export default function Input({ addTodo }) {
         maxLength="20"
         value={text}
         onChange={onChange}
+        placeholder="할 일을 입력하고 Enter키를 누르세요"
         autoFocus
       />
-      <button onClick={handleButtonClick}>추가</button>
     </div>
   );
 }

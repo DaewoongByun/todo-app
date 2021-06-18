@@ -35,9 +35,6 @@ export default function TodoList({ todos, toggleDone, deleteTodo }) {
   }, [todos, year, month, day]);
   return (
     <div className={styles.todoList} style={{ height: `${listHeight}px` }}>
-      <div>
-        {year}/{month}/{day}
-      </div>
       <ul>
         {showTodos.map((todo) => {
           return (
