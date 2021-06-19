@@ -1,0 +1,59 @@
+.container {
+  width: 500px;
+  margin-bottom: 20px;
+}
+.today {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+.today_text {
+  font-size: 18px;
+}
+.today_icon {
+  cursor: pointer;
+}
+
+.monthPicker {
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar {
+  transition: all 1s;
+}
+.hide {
+  display: none;
+}
+.day {
+  display: flex;
+}
+.calendar_item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+
+.calendar_item > span {
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+.calendar_item > span:hover {
+  transform: scale(1.2);
+  color: palevioletred;
+}
+
+.todaybg {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 500px;
+}

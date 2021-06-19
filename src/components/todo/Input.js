@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import styles from "./Input.module.css";
 
 export default function Input({ addTodo }) {
@@ -19,26 +19,17 @@ export default function Input({ addTodo }) {
       }
     }
   }
-  function handleButtonClick() {
-    if (text.trim()) {
-      addTodo(text, year, month, day);
-      setText("");
-    }
-    inputRef.current.focus();
-  }
 
   return (
-    <div className={styles.input}>
-      <input
-        ref={inputRef}
-        type="text"
-        onKeyUp={createTodo}
-        maxLength="20"
-        value={text}
-        onChange={onChange}
-        placeholder="할 일을 입력하고 Enter키를 누르세요"
-        autoFocus
-      />
-    </div>
+    <input
+      ref={inputRef}
+      type="text"
+      onKeyUp={createTodo}
+      maxLength="20"
+      value={text}
+      onChange={onChange}
+      placeholder="할 일을 입력하고 Enter키를 누르세요"
+      autoFocus
+    />
   );
 }

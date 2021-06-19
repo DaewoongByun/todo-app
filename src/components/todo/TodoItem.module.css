@@ -1,8 +1,7 @@
 .done {
   opacity: 0.5;
   text-decoration: line-through;
-  width: 95%;
-  height: 40px;
+  transform: scale(0.95);
 }
 
 li:first-child {
@@ -23,7 +22,7 @@ li {
   transition: all 0.2s;
 }
 
-li:hover {
+.unDone:hover {
   transform: translateY(-3px) scale(1.01);
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
 }

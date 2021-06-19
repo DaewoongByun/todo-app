@@ -9,7 +9,7 @@ export default function Todo({ todo, toggleDone, deleteTodo }) {
     if (window.confirm("삭제하시겠습니까?")) deleteTodo(todo);
   }
   return (
-    <li className={todo.isDone ? styles.done : ""}>
+    <li className={todo.isDone ? styles.done : styles.unDone}>
       <div className={styles.textField}>
         <span className={styles.title}>{todo.text}</span>
         <span className={styles.date}>{`${todo.year}/${todo.month}/${todo.day}까지`}</span>

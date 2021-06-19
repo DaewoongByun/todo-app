@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Input from "../components/todo/Input";
 import TodoList from "../components/todo/TodoList";
+import Calendar from "../components/todo/Calendar";
 import styles from "./TodoView.module.css";
 
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
@@ -59,6 +60,7 @@ export default function TodoView() {
             to={`${new Date().getFullYear()}/${new Date().getMonth() + 1}/${new Date().getDate()}`}
           />
           <Route path="/:year/:month/:day">
+            <Calendar />
             <Input addTodo={addTodo} />
             <TodoList todos={todos} deleteTodo={deleteTodo} toggleDone={toggleDone} />
           </Route>
