@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useHistory, useParams } from "react-router";
 import styles from "./Calendar.module.css";
 import { ChevronDown, ChevronLeft, ChevronUp, ChevronRight } from "react-bootstrap-icons";
